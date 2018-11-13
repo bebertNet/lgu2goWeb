@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~styles/custom.scss";
+@import "~styles/flex.scss";
+@import "~styles/font.scss";
+@import "~styles/function.scss";
+@import "~styles/root.scss";
+@import "~styles/sanity.scss";
+@import "~styles/mat-datepicker.scss";
+@import "~styles/snotify.scss";
+@import "~styles/pagination.scss";
+
+body {
+    font-size: var(--font-base-size);
+    background-color: color-level(light);
+
+    span {
+        font-family: 'open_sansregular' !important;
+    }
+
+    div {
+        font-family: 'open_sansregular' !important;
+    }
+
+    i.material-icons {
+        font-family: 'Material Icons' !important;
+    }
+}

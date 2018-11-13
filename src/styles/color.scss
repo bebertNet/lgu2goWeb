@@ -1,0 +1,34 @@
+@import "~styles/root.scss";
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #c1272d;
+$orange: #F69333;
+$yellow: #D89622;
+$green: #7CC74C;
+$teal: #20c997;
+$bluegreen: #007894;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #F4F4F4;
+$gray-dark: #1d1d1b;
+$light-gray: #E7E7E7;
+$dirty-white: #f2f2f2;
+$faded-dark: #999999;
+
+$theme-colors: (
+  "primary":      $bluegreen,
+  "secondary":    $gray,
+  "success":      $green,
+  "danger":       $red,
+  "info":         $cyan,
+  "warning":      $yellow,
+  "dark":         $gray-dark,
+  "light":        $white,
+  "dim":          $light-gray,
+  "contrast":     $orange,    
+  "faded-light":  $dirty-white,
+  "faded-dark":   $faded-dark
+) !default;

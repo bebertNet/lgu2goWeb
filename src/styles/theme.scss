@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@import "~styles/color.scss";
+@import "~styles/function.scss";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$primary: makeColorPalette(color(primary));
+$secondary: makeColorPalette(color(secondary));
+$warning: makeColorPalette(color(warning));
+
+// mandatory stuff for theming
+$primary-palette: mat-palette($primary);
+$accent-palette:  mat-palette($secondary);
+
+// include the custom theme components into a theme object
+$main-theme: mat-light-theme($primary-palette, $accent-palette);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($main-theme);

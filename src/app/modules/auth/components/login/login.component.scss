@@ -1,0 +1,565 @@
+@import "~styles.scss";
+
+.main-container {
+
+    .body-container {
+        padding: 50px 30px 0 30px;
+        flex-direction: column;
+
+        .body-wrapper {
+            width: 100%;
+            max-width: 600px;
+            padding: 45px 60px;
+            border-radius: 5px;
+
+            .logo-container {
+                z-index: 1;
+                width: 100%;
+    
+                .logo-wrapper {
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+
+            .title-container {
+                margin-top: 5px;
+
+                .title-wrapper {
+
+                    span {
+                        font-size: 28.4px;
+                        letter-spacing: -0.8px;
+                        color: color(light);
+                    }
+                }
+            }
+
+            .description-container {
+                line-height: 1.4em;
+                color: color(light);
+
+                &.error {
+                    color: color(contrast);
+                }
+            }
+
+            .form-container {
+                margin-top: 35px;
+                padding-right: 120px;
+
+                .input-container {
+
+                    .input-label {
+                        flex: 1;
+                        padding: 5px 10px;
+                        color: color(faded-light);
+                    }
+
+                    /deep/ app-input {
+                        width: 240px;
+
+                        input {
+                            background-color: color(light);
+                        }
+
+                        .message-text {
+                            color: color(contrast);
+                        }
+                    }
+                }
+
+                .input-container + .input-container {
+                    margin-top: 20px;
+                }
+
+                .actions {
+                    margin-top: 5px;
+
+                    .actions-container {
+
+                        .left-action {
+        
+                            .action-wrapper {
+                                color: color(faded-light);
+
+                                .link {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .right-action {
+                            margin-top: 40px;
+                            padding-left: 115px;
+
+                            /deep/ app-button {
+                                button {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .main-container {
+
+        .body-container {
+    
+            .body-wrapper {
+    
+                .logo-container {
+        
+                    .logo-wrapper {
+
+                        img {
+
+                        }
+                    }
+                }
+    
+                .title-container {
+    
+                    .title-wrapper {
+    
+                        span {
+
+                        }
+                    }
+                }
+    
+                .form-container {
+    
+                    .input-container {
+    
+                        .input-label {
+
+                        }
+    
+                        /deep/ app-input {
+    
+                            input {
+
+                            }
+    
+                            .message-text {
+
+                            }
+                        }
+                    }
+    
+                    .input-container + .input-container {
+
+                    }
+    
+                    .actions {
+    
+                        .actions-container {
+    
+                            .left-action {
+            
+                                .action-wrapper {
+    
+                                    .link {
+
+                                    }
+                                }
+                            }
+    
+                            .right-action {
+    
+                                /deep/ app-button {
+
+                                    button {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-container {
+
+        .body-container {
+    
+            .body-wrapper {
+    
+                .logo-container {
+        
+                    .logo-wrapper {
+
+                        img {
+
+                        }
+                    }
+                }
+    
+                .title-container {
+    
+                    .title-wrapper {
+    
+                        span {
+
+                        }
+                    }
+                }
+    
+                .form-container {
+    
+                    .input-container {
+    
+                        .input-label {
+
+                        }
+    
+                        /deep/ app-input {
+    
+                            input {
+
+                            }
+    
+                            .message-text {
+
+                            }
+                        }
+                    }
+    
+                    .input-container + .input-container {
+
+                    }
+    
+                    .actions {
+    
+                        .actions-container {
+    
+                            .left-action {
+            
+                                .action-wrapper {
+    
+                                    .link {
+
+                                    }
+                                }
+                            }
+    
+                            .right-action {
+    
+                                /deep/ app-button {
+
+                                    button {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .main-container {
+
+        .body-container {
+    
+            .body-wrapper {
+    
+                .logo-container {
+        
+                    .logo-wrapper {
+
+                        img {
+
+                        }
+                    }
+                }
+    
+                .title-container {
+    
+                    .title-wrapper {
+    
+                        span {
+
+                        }
+                    }
+                }
+    
+                .form-container {
+    
+                    .input-container {
+    
+                        .input-label {
+
+                        }
+    
+                        /deep/ app-input {
+    
+                            input {
+
+                            }
+    
+                            .message-text {
+
+                            }
+                        }
+                    }
+    
+                    .input-container + .input-container {
+
+                    }
+    
+                    .actions {
+    
+                        .actions-container {
+    
+                            .left-action {
+            
+                                .action-wrapper {
+    
+                                    .link {
+
+                                    }
+                                }
+                            }
+    
+                            .right-action {
+    
+                                /deep/ app-button {
+
+                                    button {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .main-container {
+
+        .body-container {
+            padding: 0px 30px;
+    
+            .body-wrapper {
+                padding: 0 0 30px 0;
+    
+                .logo-container {
+        
+                    .logo-wrapper {
+
+                        img {
+
+                        }
+                    }
+                }
+    
+                .title-container {
+    
+                    .title-wrapper {
+    
+                        span {
+                            font-size: 36px;
+                            line-height: 44px;
+                        }
+                    }
+                }
+    
+                .form-container {
+                    padding-right: 0;
+                    margin-top: 10px;
+    
+                    .input-container {
+                        display: block;
+    
+                        .input-label {
+                            padding: 5px 0;
+                            justify-content: flex-start;
+                        }
+    
+                        /deep/ app-input {
+    
+                            input {
+
+                            }
+    
+                            .message-text {
+
+                            }
+                        }
+                    }
+    
+                    .input-container + .input-container {
+                        margin-top: 5px;
+                    }
+    
+                    .actions {
+    
+                        .actions-container {
+    
+                            .left-action {
+                                padding-top: 5px;
+                                justify-content: center;
+            
+                                .action-wrapper {
+    
+                                    .link {
+
+                                    }
+                                }
+                            }
+    
+                            .right-action {
+                                padding-left: 0;
+                                margin-top: 30px;
+    
+                                /deep/ app-button {
+
+                                    button {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .main-container {
+
+        .body-container {
+            padding: 0px 30px;
+    
+            .body-wrapper {
+                padding: 0 0 30px 0;
+    
+                .logo-container {
+        
+                    .logo-wrapper {
+
+                        img {
+
+                        }
+                    }
+                }
+    
+                .title-container {
+    
+                    .title-wrapper {
+    
+                        span {
+                            font-size: 36px;
+                            line-height: 44px;
+                        }
+                    }
+                }
+    
+                .form-container {
+                    padding-right: 0;
+                    margin-top: 10px;
+    
+                    .input-container {
+                        display: block;
+    
+                        .input-label {
+                            padding: 5px 0;
+                            justify-content: flex-start;
+                        }
+    
+                        /deep/ app-input {
+    
+                            input {
+
+                            }
+    
+                            .message-text {
+
+                            }
+                        }
+                    }
+    
+                    .input-container + .input-container {
+                        margin-top: 5px;
+                    }
+    
+                    .actions {
+    
+                        .actions-container {
+    
+                            .left-action {
+                                padding-top: 5px;
+                                justify-content: center;
+            
+                                .action-wrapper {
+    
+                                    .link {
+
+                                    }
+                                }
+                            }
+    
+                            .right-action {
+                                padding-left: 0;
+                                margin-top: 30px;
+    
+                                /deep/ app-button {
+
+                                    button {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

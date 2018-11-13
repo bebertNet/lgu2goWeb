@@ -1,0 +1,24 @@
+<button
+    class="label"
+    [disabled]="disabled"
+    [type]="type"
+    [ngClass]="{
+        btnPrimary: isPrimary,
+        btnSecondary: isSecondary,
+        btnSuccess: isSuccess,
+        btnDanger: isDanger,
+        btnDim: isDim,
+        btnClear: isClear,
+        btnFadedDark: isFadedDark,
+        btnRounded: isRounded,
+        btnOutline: isOutline,
+        btnDark: isDark,
+        btnLight: isLight,
+        disabled: disabled
+    }"
+    [style.height]="height + 'px'">
+    <div class="content-wrapper flex-center"
+        style="width: 100%;">
+        <ng-content></ng-content>
+    </div>
+</button>

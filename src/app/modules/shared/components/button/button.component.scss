@@ -1,0 +1,127 @@
+@import "~styles.scss";
+
+:host() {
+    display: inline-block;
+}
+
+:host:hover,
+button:hover {
+    cursor: pointer;
+    opacity: 0.95;
+}
+
+button:active {
+    opacity: 0.85;
+}
+
+button {
+    width:100%;
+    border: 0px transparent;
+    font-size: 16px;
+    outline: none;
+    padding: 0px 25px;
+    min-height: 30px;
+    color: color(light);
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+
+    .content-wrapper {
+        outline: none;
+    }
+
+    &.disabled {
+        opacity: 0.75;
+        cursor: auto;
+    }
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.btnPrimary {
+    background-color: color(primary);
+    border: 1px solid color(primary);
+
+    &.btnOutline {
+        color: color(primary);
+    }
+}
+
+.btnSecondary {
+    background-color: color(secondary);
+    border: 1px solid color(secondary);
+
+    &.btnOutline {
+        color: color(secondary);
+    }
+}
+
+.btnSuccess {
+    background-color: color(success);
+    border: 1px solid color(success);
+
+    &.btnOutline {
+        color: color(success);
+    }
+}
+
+.btnDanger {
+    background-color: color(danger);
+    border: 1px solid color(danger);
+
+    &.btnOutline {
+        color: color(danger);
+    }
+}
+
+.btnDim {
+    background-color: color(dim);
+    border: 1px solid color(dim);
+
+    &.btnOutline {
+        color: color(dim);
+    }
+}
+
+.btnDark {
+    background-color: color(dark);
+    border: 1px solid color(dark);
+
+    &.btnOutline {
+        color: color(dark);
+    }
+}
+
+.btnLight {
+    background-color: color(light);
+    border: 1px solid color(light);
+
+    &.btnOutline {
+        color: color(light);
+    }
+}
+
+.btnClear {
+    background-color: transparent;
+}
+
+.btnFadedDark {
+    background-color: color(faded-dark);
+    border: 1px solid color(faded-dark);
+
+    &.btnOutline {
+        color: color(faded-dark);
+    }
+}
+
+.btnRounded {
+    border-radius: 50%;
+}
+
+.btnOutline {
+    background-color: transparent;
+}

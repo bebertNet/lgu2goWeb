@@ -1,0 +1,74 @@
+@import "~styles.scss";
+
+.input-container {
+    flex-direction: column;
+
+    span.label-text {
+        padding-bottom: 5px;
+        color: color(dark);
+    }
+
+    input {
+        height: 30px;
+        font-size: 12px;
+        padding-left: 5px;
+        border: 1px solid color-level(dark, 20);
+        padding: 0px 10px;
+        border-radius: 0;
+    }
+
+    input[type="text"] {
+        -webkit-appearance: none;
+    }
+
+    input[type="password"] {
+        -webkit-appearance: none;
+    }
+
+    input:focus {
+        outline: none;
+        border: 1px solid color-level(dark, 50);
+    }
+
+    .error:focus,
+    .error {
+        // border: 1px solid color(danger);
+    }
+
+    .notEnabled {
+        // background: #eeeeee;
+        // color: map-get($colors, 'disable');
+    }
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: color-level(dark, 30);
+    }
+
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: color-level(dark, 30);
+        opacity: 1;
+    }
+
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: color-level(dark, 30);
+        opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: color-level(dark, 30);
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: color-level(dark, 30);
+    }
+
+    span.message-text {
+        font-size: 11px;
+        padding-top: 3px;
+        color: color(danger);
+    }
+}

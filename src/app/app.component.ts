@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lgu2goWeb';
+  private _hideNavbar = null;
+  public get hideNavbar(): boolean {
+    return this._hideNavbar;
+  }
+  public set hideNavbar(value: boolean) {
+    if (this._hideNavbar !== value) {
+      this._hideNavbar = value;
+    }
+  }
 }

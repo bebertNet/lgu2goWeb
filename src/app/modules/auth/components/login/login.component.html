@@ -1,1 +1,97 @@
+<div class="main-container">
 
+  <div class="body-container flex-center">
+
+      <div class="body-wrapper">
+
+          <div class="logo-container flex-main-center">
+              <div class="logo-wrapper flex-center">
+                  <img src="assets/logo/logo_auth.svg" alt="">
+              </div>
+          </div>
+
+          <div class="title-container flex-main-center">
+              <div class="title-wrapper">
+                  <span>
+                      LGU2Go Admin
+                  </span>
+              </div>
+          </div>
+
+          <div class="description-container flex-main-center sublabel"
+              [ngClass]="{ error: hasError }">
+              <span>
+                  {{ descriptionString }}
+              </span>
+          </div>
+
+          <div class="form-container">
+              <form>
+
+                  <input id="username"
+                      style="opacity: 0; position: absolute; width: 0; height: 0;"
+                      type="text"
+                      name="fakeusernameremembered">
+
+                  <input id="password"
+                      style="opacity: 0; position: absolute; width: 0; height: 0;"
+                      type="password"
+                      name="fakepasswordremembered">
+
+                  <div class="input-container flex-main-between">
+                      <div class="input-label sublabel flex-end-start">
+                          <span>User ID:</span>
+                      </div>
+                      <app-input
+                          height="30"
+                          formControlName="username"
+                          [control]="loginForm.controls['username']">
+                      </app-input>
+                  </div>
+
+                  <div class="input-container flex-main-between">
+                      <div class="input-label sublabel flex-end-start">
+                          <span>Password:</span>
+                      </div>
+                      <app-input
+                          height="30"
+                          type="password"
+                          formControlName="password"
+                          [control]="loginForm.controls['password']">
+                      </app-input>
+                  </div>
+
+                  <div class="actions">
+                      <div class="actions-container">
+                          <div class="left-action flex-main-end">
+                              <div class="action-wrapper tiny">
+                                  <span>
+                                      Forgot your password?
+                                  </span>
+                                  <span class="clickable link faded"
+                                      (click)="onForgotPasswordClick()">
+                                      Click here.
+                                  </span>
+                              </div>
+                          </div>
+
+                          <div class="right-action flex-main-center">
+                              <div class="action-wrapper">
+                                  <app-button
+                                      submit
+                                      light
+                                      outline
+                                      height="35">
+                                      <span class="sublabel">
+                                          Login
+                                      </span>
+                                  </app-button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

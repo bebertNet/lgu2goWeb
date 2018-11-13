@@ -1,0 +1,18 @@
+@import "~styles/color.scss";
+
+pagination-controls {
+
+    pagination-template {
+
+        .ngx-pagination {
+            font-size: 12px;
+
+            li {
+
+                &.current {
+                    background: color(primary);
+                }
+            }
+        }
+    }
+}

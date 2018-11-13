@@ -1,0 +1,18 @@
+@import "~styles.scss";
+
+.outlet-container {
+  min-height: 100vh;
+  padding-top: 75px;
+
+  &.primary {
+    background-color: color(primary);
+  }
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    cursor: none;
+    touch-action: none;
+    -ms-touch-action: none;
+  }
+}

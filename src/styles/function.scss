@@ -1,0 +1,62 @@
+@import "~styles/color.scss";
+
+$color-interval: 0.01;
+
+@function color($key: "primary") {
+    @return map-get($theme-colors, $key);
+}
+
+@function color-level($color-name: "primary", $opacity: 100) {
+    $color: color($color-name);
+    $level: abs($opacity);
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+    @return rgba($red, $green, $blue, $level * $color-interval);
+}
+
+@function multiply($fore, $back) {
+    $red: red($back) * red($fore) / 255;
+    $green: green($back) * green($fore) / 255;
+    $blue: blue($back) * blue($fore) / 255;
+    @return rgb($red, $green, $blue);
+}
+
+@function makeColorPalette($color) {
+    $light: #fff;
+    $dark: multiply($color, $color);
+    $palette: (
+        50: mix($light, $color, 88%),
+        100: mix($light, $color, 70%),
+        200: mix($light, $color, 50%),
+        300: mix($light, $color, 30%),
+        400: mix($light, $color, 15%),
+        500: mix($light, $color, 0%),
+        600: mix($dark, $color, 13%),
+        700: mix($dark, $color, 30%),
+        800: mix($dark, $color, 46%),
+        900: mix($dark, $color, 75%),
+        A100: lighten(saturate(mix($dark, $color, 15%), 80%), 45.6%),
+        A200: lighten(saturate(mix($dark, $color, 15%), 80%), 35.6%),
+        A400: lighten(saturate(mix($dark, $color, 15%), 100%), 25.6%),
+        A700: lighten(saturate(mix($dark, $color, 15%), 100%), 20.5%),
+        contrast: (
+            500: white,
+            600: white,
+            700: white,
+            800: white,
+            900: white,
+            A700: white,
+        )
+    );
+    @return $palette;
+}
+
+@mixin grid-items($limit, $element) {
+    @for $i from 1 to $limit {
+        #{$element}:nth-child(#{$i}) {
+            grid-column: $i;
+            -ms-grid-column: $i;
+        }
+    }
+}

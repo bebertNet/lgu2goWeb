@@ -1,43 +1,43 @@
 <div class="input-container flex">
-  <span class="label-text sublabel" [hidden]="!label">
-      {{ label }}
-  </span>
+    <span class="label-text sublabel" [hidden]="!label">
+        {{ label }}
+    </span>
 
-  <input
-      *ngIf="disabled"
-      autocomplete="off"
-      [ngClass]="{
-          notEnabled : disabled,
-          error: _errorMessage,
-          'disabled': !!disabled
-      }"
-      [type]="type"
-      [style.height]="height + 'px'"
-      [placeholder]="placeholder ? placeholder : ''"
-      (blur)="onBlur()"
-      [(ngModel)]="value"
-      (keydown.enter)="onBlur()"
-      (keydown.space)="type!='password' || $event.preventDefault()"
-      readonly>
+    <input
+        *ngIf="disabled"
+        autocomplete="off"
+        [ngClass]="{
+            notEnabled : disabled,
+            error: _errorMessage,
+            'disabled': !!disabled
+        }"
+        [type]="type"
+        [style.height]="height + 'px'"
+        [placeholder]="placeholder ? placeholder : ''"
+        (blur)="onBlur()"
+        [(ngModel)]="value"
+        (keydown.enter)="onBlur()"
+        (keydown.space)="type!='password' || $event.preventDefault()"
+        readonly>
 
-  <input
-      *ngIf="!disabled"
-      autocomplete="off"
-      [ngClass]="{
-          notEnabled : disabled,
-          error: _errorMessage,
-          'disabled': !!disabled
-      }"
-      [type]="type"
-      [style.height]="height + 'px'"
-      [placeholder]="placeholder ? placeholder : ''"
-      (blur)="onBlur()"
-      [(ngModel)]="value"
-      (keydown.enter)="onBlur()"
-      (keydown.space)="type!='password' || $event.preventDefault()">
+    <input
+        *ngIf="!disabled"
+        autocomplete="off"
+        [ngClass]="{
+            notEnabled : disabled,
+            error: _errorMessage,
+            'disabled': !!disabled
+        }"
+        [type]="type"
+        [style.height]="height + 'px'"
+        [placeholder]="placeholder ? placeholder : ''"
+        (blur)="onBlur()"
+        [(ngModel)]="value"
+        (keydown.enter)="onBlur()"
+        (keydown.space)="type!='password' || $event.preventDefault()">
 
-  <span class="message-text"
-      [hidden]="!_errorMessage || hideError">
-      {{ _errorMessage }}
-  </span>
+    <span class="message-text"
+        [hidden]="!_errorMessage || hideError">
+        {{ _errorMessage }}
+    </span>
 </div>
